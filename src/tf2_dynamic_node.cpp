@@ -1,7 +1,7 @@
 #include "tf2_dynamic_node.h"
 #include <pluginlib/class_list_macros.h>
 
-namespace image_cloud {
+namespace tf2_dynamic {
 
 void
 Tf2_dynamic::onInit() {
@@ -92,10 +92,10 @@ Tf2_dynamic::~Tf2_dynamic(){
 
 
 int main(int argc, char **argv){
-	ros::init(argc, argv, "manual_calibration");
-	image_cloud::Tf2_dynamic manual_transform;
-	ROS_INFO_NAMED("maunal_calibration", "start");
+	ros::init(argc, argv, "tf2_dynamic");
+	tf2_dynamic::Tf2_dynamic manual_transform;
+	ROS_INFO_NAMED("tf2_dynamic", "start");
 	manual_transform.onInit();
 	manual_transform.loop();
-	ROS_INFO_NAMED("maunal_calibration", "done");
+	ROS_INFO_NAMED("tf2_dynamic", "done");
 }

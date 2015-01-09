@@ -23,12 +23,12 @@
 #include <geometry_msgs/TransformStamped.h>
 
 #include <dynamic_reconfigure/server.h>
-#include <image_cloud/manual_calibrationConfig.h>
+#include <tf2_dynamic/tf2_dynamic_nodeConfig.h>
 
-namespace image_cloud {
+namespace tf2_dynamic {
 
 class Tf2_dynamic {
-	typedef image_cloud::manual_calibrationConfig Config;
+	typedef tf2_dynamic::tf2_dynamic_nodeConfig Config;
 	typedef dynamic_reconfigure::Server<Config> ReconfigureServer;
 public:
 	virtual void onInit();
