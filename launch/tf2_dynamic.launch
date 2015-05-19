@@ -1,8 +1,10 @@
 <launch>
-  <arg name="parent_frame" default="base_link" />
-  <arg name="child_frame" default="take_me_somewhere" />
-  <node name="tf2_dynamic_node"             pkg="tf2_dynamic" type="tf2_dynamic_node">
-  	<param name="parent_frame" type="string" value="$(arg parent_frame)" />
-  	<param name="child_frame" type="string" value="$(arg child_frame)" />
+  <arg name="name"			default="tf2_dynamic_node" />
+  <arg name="parent_frame" 	default="base_link" />
+  <arg name="child_frame" 	default="take_me_somewhere" />
+  
+  <node name="$(arg name)"             pkg="tf2_dynamic" type="tf2_dynamic_node">
+  	<param name="parent_frame" 	type="string" value="$(arg parent_frame)" />
+  	<param name="child_frame" 	type="string" value="$(arg child_frame)" />
   </node>
 </launch>
